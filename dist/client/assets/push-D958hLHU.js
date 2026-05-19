@@ -1,0 +1,1 @@
+import{j as e}from"./index-ytweA-NT.js";import{W as o,a as t}from"./workouts-BbBpjrCX.js";import"./play-C-ex1RX4.js";const n=()=>e.jsx(o,{tag:"Day 1",title:"Push Day",description:"Chest, shoulders, and triceps. Focus on controlled eccentrics and a strong squeeze at the top of every rep.",exercises:t});export{n as component};
