@@ -79,7 +79,7 @@ function WorkoutTimer() {
   );
 }
 
-const DAYS = ["Push", "Pull", "Legs"] as const;
+const DAYS = ["Push 1", "Push 2", "Pull", "Legs"] as const;
 function ProgressTracker() {
   const [done, setDone] = useState<Record<string, boolean>>(() => {
     if (typeof window === "undefined") return {};

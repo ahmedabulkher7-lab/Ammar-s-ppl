@@ -10,7 +10,7 @@ export type Exercise = {
 const img = (q: string) =>
   `https://images.unsplash.com/${q}?auto=format&fit=crop&w=800&q=70`;
 
-export const pushDay: Exercise[] = [
+export const pushDay1: Exercise[] = [
   { name: "Incline Dumbbell Press", sets: 4, reps: "8–12", difficulty: "Intermediate", youtubeId: "8iPEnn-ltC8", image: img("photo-1581009146145-b5ef050c2e1e") },
   { name: "Chest Press", sets: 4, reps: "8–12", difficulty: "Intermediate", youtubeId: "xUm0BiZCWlQ", image: img("photo-1571019613454-1cb2f99b2d8b") },
   { name: "Shoulder Press", sets: 3, reps: "8–10", difficulty: "Intermediate", youtubeId: "qEwKCR5JCog", image: img("photo-1532029837206-abbe2b7620e3") },
@@ -18,6 +18,15 @@ export const pushDay: Exercise[] = [
   { name: "Lateral Raises", sets: 3, reps: "12–15", difficulty: "Beginner", youtubeId: "3VcKaXpzqRo", image: img("photo-1583454110551-21f2fa2afe61") },
   { name: "Tricep Cable Pushdown", sets: 3, reps: "10–12", difficulty: "Beginner", youtubeId: "2-LAMcpzODU", image: img("photo-1530822847156-5df684ec5ee1") },
   { name: "Overhead Tricep Extension", sets: 3, reps: "10–12", difficulty: "Intermediate", youtubeId: "_gsUck-7M74", image: img("photo-1599058917212-d750089bc07e") },
+];
+
+export const pushDay2: Exercise[] = [
+  { name: "Shoulder Press", sets: 3, reps: "8–10", difficulty: "Intermediate", youtubeId: "qEwKCR5JCog", image: img("photo-1532029837206-abbe2b7620e3") },
+  { name: "Lateral Raises", sets: 3, reps: "12–15", difficulty: "Beginner", youtubeId: "3VcKaXpzqRo", image: img("photo-1583454110551-21f2fa2afe61") },
+  { name: "Flat Bench Press", sets: 3, reps: "8–12", difficulty: "Beginner", youtubeId: "rT7DgCr-3pg", image: img("photo-1581009146145-b5ef050c2e1e") },
+  { name: "Incline Chest Press Machine", sets: 3, reps: "8–12", difficulty: "Intermediate", youtubeId: "ig0NyNlSce4", image: img("photo-1571019613454-1cb2f99b2d8b") },
+  { name: "Close-Grip Bench Press", sets: 3, reps: "10–12", difficulty: "Intermediate", youtubeId: "nEF0bv2FW94", image: img("photo-1530822847156-5df684ec5ee1") },
+  { name: "Overhead Tricep Extension", sets: 3, reps: "10–12", difficulty: "Intermediate", youtubeId: "YbX7Wd8jQ-Q", image: img("photo-1599058917212-d750089bc07e") },
 ];
 
 export const pullDay: Exercise[] = [

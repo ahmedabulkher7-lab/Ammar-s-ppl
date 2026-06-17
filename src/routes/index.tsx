@@ -9,14 +9,15 @@ export const Route = createFileRoute("/")({
 });
 
 const days = [
-  { to: "/push", title: "Push Day", desc: "Chest, shoulders, triceps", color: "from-red-600 to-orange-500" },
+  { to: "/push1", title: "Push Day 1", desc: "Chest, shoulders, triceps", color: "from-red-600 to-orange-500" },
+  { to: "/push2", title: "Push Day 2", desc: "Chest, shoulders, triceps", color: "from-orange-600 to-amber-500" },
   { to: "/pull", title: "Pull Day", desc: "Back, rear delts, biceps", color: "from-red-700 to-rose-500" },
   { to: "/legs", title: "Legs Day", desc: "Quads, hamstrings, calves", color: "from-rose-600 to-red-500" },
 ] as const;
 
 const stats = [
   { icon: Flame, label: "Exercises", value: "21" },
-  { icon: Target, label: "Training Days", value: "3" },
+  { icon: Target, label: "Training Days", value: "4" },
   { icon: TrendingUp, label: "Weekly Volume", value: "78 sets" },
 ];
 
@@ -43,7 +44,7 @@ function Index() {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                to="/push"
+                to="/push1"
                 className="group inline-flex items-center gap-2 rounded-xl bg-gradient-red px-7 py-4 text-base font-bold uppercase tracking-wider text-primary-foreground shadow-red transition-transform hover:scale-105"
               >
                 Start Training
@@ -89,7 +90,7 @@ function Index() {
             The Split
           </span>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold tracking-tight">
-            Three days, <span className="text-gradient-red">infinite gains</span>
+            Four days, <span className="text-gradient-red">infinite gains</span>
           </h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">

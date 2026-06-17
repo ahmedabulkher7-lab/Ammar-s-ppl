@@ -9,15 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as PushRouteImport } from './routes/push'
+import { Route as Push2RouteImport } from './routes/push2'
+import { Route as Push1RouteImport } from './routes/push1'
 import { Route as PullRouteImport } from './routes/pull'
 import { Route as LegsRouteImport } from './routes/legs'
+import { Route as DietRouteImport } from './routes/diet'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
-const PushRoute = PushRouteImport.update({
-  id: '/push',
-  path: '/push',
+const Push2Route = Push2RouteImport.update({
+  id: '/push2',
+  path: '/push2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Push1Route = Push1RouteImport.update({
+  id: '/push1',
+  path: '/push1',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PullRoute = PullRouteImport.update({
@@ -28,6 +35,11 @@ const PullRoute = PullRouteImport.update({
 const LegsRoute = LegsRouteImport.update({
   id: '/legs',
   path: '/legs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DietRoute = DietRouteImport.update({
+  id: '/diet',
+  path: '/diet',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -44,48 +56,71 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/diet': typeof DietRoute
   '/legs': typeof LegsRoute
   '/pull': typeof PullRoute
-  '/push': typeof PushRoute
+  '/push1': typeof Push1Route
+  '/push2': typeof Push2Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/diet': typeof DietRoute
   '/legs': typeof LegsRoute
   '/pull': typeof PullRoute
-  '/push': typeof PushRoute
+  '/push1': typeof Push1Route
+  '/push2': typeof Push2Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/diet': typeof DietRoute
   '/legs': typeof LegsRoute
   '/pull': typeof PullRoute
-  '/push': typeof PushRoute
+  '/push1': typeof Push1Route
+  '/push2': typeof Push2Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/legs' | '/pull' | '/push'
+  fullPaths: '/' | '/about' | '/diet' | '/legs' | '/pull' | '/push1' | '/push2'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/legs' | '/pull' | '/push'
-  id: '__root__' | '/' | '/about' | '/legs' | '/pull' | '/push'
+  to: '/' | '/about' | '/diet' | '/legs' | '/pull' | '/push1' | '/push2'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/diet'
+    | '/legs'
+    | '/pull'
+    | '/push1'
+    | '/push2'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  DietRoute: typeof DietRoute
   LegsRoute: typeof LegsRoute
   PullRoute: typeof PullRoute
-  PushRoute: typeof PushRoute
+  Push1Route: typeof Push1Route
+  Push2Route: typeof Push2Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/push': {
-      id: '/push'
-      path: '/push'
-      fullPath: '/push'
-      preLoaderRoute: typeof PushRouteImport
+    '/push2': {
+      id: '/push2'
+      path: '/push2'
+      fullPath: '/push2'
+      preLoaderRoute: typeof Push2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/push1': {
+      id: '/push1'
+      path: '/push1'
+      fullPath: '/push1'
+      preLoaderRoute: typeof Push1RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pull': {
@@ -100,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/legs'
       fullPath: '/legs'
       preLoaderRoute: typeof LegsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diet': {
+      id: '/diet'
+      path: '/diet'
+      fullPath: '/diet'
+      preLoaderRoute: typeof DietRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -122,9 +164,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  DietRoute: DietRoute,
   LegsRoute: LegsRoute,
   PullRoute: PullRoute,
-  PushRoute: PushRoute,
+  Push1Route: Push1Route,
+  Push2Route: Push2Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -4,9 +4,11 @@ import { Menu, X, Dumbbell } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { to: "/push", label: "Push Day" },
+  { to: "/push1", label: "Push Day 1" },
+  { to: "/push2", label: "Push Day 2" },
   { to: "/pull", label: "Pull Day" },
   { to: "/legs", label: "Legs Day" },
+  { to: "/diet", label: "Diet" },
   { to: "/about", label: "About" },
 ] as const;
 
