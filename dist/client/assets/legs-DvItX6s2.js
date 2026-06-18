@@ -1,1 +1,0 @@
-import{j as t}from"./index-ytweA-NT.js";import{W as e,l as o}from"./workouts-BbBpjrCX.js";import"./play-C-ex1RX4.js";const n=()=>t.jsx(e,{tag:"Day 3",title:"Legs Day",description:"Full lower body. Push through the heels, control the descent, and don't skip the calves.",exercises:o});export{n as component};
