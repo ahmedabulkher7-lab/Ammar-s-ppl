@@ -41,7 +41,7 @@ export const pullDay: Exercise[] = [
 
 export const legsDay: Exercise[] = [
   { name: "Hack Squat", sets: 4, reps: "8–12", difficulty: "Advanced", youtubeId: "fE5BWPy7uRc", image: img("photo-1434596922112-19c563067271") },
-  { name: "Romanian Deadlift", sets: 4, reps: "8–10", difficulty: "Advanced", youtubeId: "JCXUYuzwNrM", image: img("photo-1517836357463-d25dfeac3438") },
+  { name: "Back Extensions", sets: 4, reps: "8–10", difficulty: "Advanced", youtubeId: "ph3pddpKzzw", image: img("photo-1517836357463-d25dfeac3438") },
   { name: "Leg Press", sets: 4, reps: "10–12", difficulty: "Intermediate", youtubeId: "IZxyjW7MPJQ", image: img("photo-1574680096145-d05b474e2155") },
   { name: "Hamstring Curl", sets: 3, reps: "10–12", difficulty: "Beginner", youtubeId: "1Tq3QdYUuHs", image: img("photo-1571019613454-1cb2f99b2d8b") },
   { name: "Leg Extension", sets: 3, reps: "12–15", difficulty: "Beginner", youtubeId: "YyvSfVjQeL0", image: img("photo-1534438327276-14e5300c3a48") },

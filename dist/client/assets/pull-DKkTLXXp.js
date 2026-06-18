@@ -1,0 +1,1 @@
+import{j as t}from"./index-ytweA-NT.js";import{W as e,p as o}from"./workouts-BbBpjrCX.js";import"./play-C-ex1RX4.js";const p=()=>t.jsx(e,{tag:"Day 2",title:"Pull Day",description:"Back, rear delts, and biceps. Lead every rep with the elbows, drive through the lats, and own the stretch.",exercises:o});export{p as component};
